@@ -1,6 +1,6 @@
 'use strict';
 
-const COOKIE_KEY = 'abtesting-segmentid';
+const COOKIE_KEY = 'ABTesting-SegmentID';
 
 const getCookie = (headers, cookieKey) => {
     if (headers.cookie) {
