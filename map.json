@@ -1,0 +1,34 @@
+{
+    "segmentGroups": [
+        {
+            "range": [
+                0,
+                69
+            ],
+            "host": "abtesting-ttblog-a.s3.amazonaws.com",
+            "origin": {
+                "s3": {
+                    "authMethod": "none",
+                    "domainName": "abtesting-ttblog-a.s3.amazonaws.com",
+                    "path": "",
+                    "region": "eu-west-1"
+                }
+            }
+        },
+        {
+            "range": [
+                70,
+                99
+            ],
+            "host": "abtesting-ttblog-b.s3.amazonaws.com",
+            "origin": {
+                "s3": {
+                    "authMethod": "none",
+                    "domainName": "abtesting-ttblog-b.s3.amazonaws.com",
+                    "path": "",
+                    "region": "eu-west-1"
+                }
+            }
+        }
+    ]
+}
