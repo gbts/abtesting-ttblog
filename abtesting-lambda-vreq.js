@@ -1,6 +1,6 @@
 'use strict';
 
-const COOKIE_KEY = 'abtesting-segmentid';
+const COOKIE_KEY = 'ABTesting-SegmentID';
 const NUM_SEGMENTS = 100;
 
 const getRandomId = () => Math.floor(Math.random() * (1 + NUM_SEGMENTS));
