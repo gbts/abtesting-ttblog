@@ -3,7 +3,7 @@
         {
             "range": [
                 0,
-                69
+                6
             ],
             "host": "abtesting-ttblog-a.s3.amazonaws.com",
             "origin": {
@@ -17,8 +17,8 @@
         },
         {
             "range": [
-                70,
-                99
+                7,
+                9
             ],
             "host": "abtesting-ttblog-b.s3.amazonaws.com",
             "origin": {
