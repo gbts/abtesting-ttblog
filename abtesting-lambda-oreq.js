@@ -3,7 +3,6 @@
 const aws = require('aws-sdk');
 
 const COOKIE_KEY = 'ABTesting-SegmentID';
-const NUM_SEGMENTS = 100;
 
 const s3 = new aws.S3({ region: 'eu-west-1' });
 const s3Params = {
