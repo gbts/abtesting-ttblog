@@ -2,7 +2,7 @@
 
 const aws = require('aws-sdk');
 
-const COOKIE_KEY = 'abtesting-segmentid';
+const COOKIE_KEY = 'ABTesting-SegmentID';
 const NUM_SEGMENTS = 100;
 
 const s3 = new aws.S3({ region: 'eu-west-1' });
@@ -10,7 +10,7 @@ const s3Params = {
     Bucket: 'abtesting-ttblog-map',
     Key: 'map.json',
 };
-const SEGMENT_MAP_TTL = 3600000; // TTL of 1 hour
+const SEGMENT_MAP_TTL = 300000; // TTL of 5 minutes in ms
 
 const fetchSegmentMapFromS3 = async() => {
     const response = await s3.getObject(s3Params).promise();
