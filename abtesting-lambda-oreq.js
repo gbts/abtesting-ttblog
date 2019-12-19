@@ -63,7 +63,6 @@ const getSegmentGroup = async(segmentId) => {
     console.error(`No origin for segment id ${segmentId}. Check the segment map.`);
 }
 
-// Origin Request handler
 exports.handler = async(event, context, callback) => {
     const request = event.Records[0].cf.request;
     const headers = request.headers;
