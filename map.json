@@ -1,10 +1,7 @@
 {
-    "segmentGroups": [
+    "segments": [
         {
-            "range": [
-                0,
-                6
-            ],
+            "weight": 0.7,
             "host": "abtesting-ttblog-a.s3.amazonaws.com",
             "origin": {
                 "s3": {
@@ -16,10 +13,7 @@
             }
         },
         {
-            "range": [
-                7,
-                9
-            ],
+            "weight": 0.3,
             "host": "abtesting-ttblog-b.s3.amazonaws.com",
             "origin": {
                 "s3": {

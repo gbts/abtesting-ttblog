@@ -1,6 +1,6 @@
 'use strict';
 
-const COOKIE_KEY = 'ABTesting-SegmentID';
+const COOKIE_KEY = 'abtesting-unique-id';
 
 const getCookie = (headers, cookieKey) => {
     if (headers.cookie) {
@@ -17,9 +17,9 @@ const getCookie = (headers, cookieKey) => {
     return null;
 }
 
-// caveat: this will overwrite the set-cookie header from origin
-const setCookie = function(response, cookie) {
+const setCookie = function (response, cookie) {
     console.log(`Setting cookie ${cookie}`);
+    response.headers['set-cookie'] = response.headers['set-cookie'] || [];
     response.headers['set-cookie'] = [{ key: "Set-Cookie", value: cookie }];
 }
 
@@ -35,6 +35,6 @@ exports.handler = (event, context, callback) => {
         return;
     }
 
-    console.log('no segmentid cookie');
+    console.log(`no ${COOKIE_KEY} cookie`);
     callback(null, response);
 }
